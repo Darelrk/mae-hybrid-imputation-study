@@ -1,6 +1,6 @@
-# Heart Disease Imputation using Masked Autoencoder
+# MAE Hybrid Imputation Study
 
-## 🏆 Winner: MAE (Deep Learning)
+## 🏆 Winner: Masked Autoencoder (Deep Learning)
 
 **Performance:**
 - **RMSE**: 1.0380 ± 0.0402
@@ -8,14 +8,20 @@
 - **Dataset**: UCI Heart Disease (920 rows, target: fbs)
 - **Success Rate**: 100% (45/45 runs completed)
 
+## 📖 Project Overview
+
+This study compares **Masked Autoencoder (MAE)** with **hybrid imputation methods** for missing medical data. We evaluate performance across multiple mask configurations and demonstrate that **simple deep learning architectures outperform complex hybrid approaches** for cardiovascular risk factor imputation.
+
 ## 📁 Project Structure
 
 ```
-github_upload/
+mae-hybrid-imputation-study/
 ├── README.md                    # This file
+├── LICENSE                      # MIT License
 ├── requirements.txt             # Python dependencies
 ├── imputation_research_plan.md  # Complete research plan
-├── combined_research_notebook.py # 📓 Combined Research Notebook (All Pipelines)
+├── main.py                      # 🚀 Main execution script
+├── final_aggregated_comparison.csv # 📊 Complete results summary
 ├── src/
 │   ├── hybrid_pipeline.py       # 🔄 Hybrid Pipeline Source
 │   ├── mae_residuals.png        # 📊 MAE residual analysis
@@ -24,7 +30,10 @@ github_upload/
 │   └── final_comparison_rmse.png # 📊 RMSE comparison
 ├── data/
 │   ├── data_cleaned.csv         # 📊 Complete dataset (920 rows)
-│   └── masks/                   # 🎭 Mask files
+│   ├── data_correlation.png     # 📊 Feature correlations
+│   ├── data_missingness.png     # 📊 Missingness patterns
+│   ├── data_target_dist.png     # 📊 Target distribution
+│   └── masks/                   # 🎭 Synthetic mask files
 ├── artifacts/
 │   ├── scaler.pkl               # StandardScaler parameters
 │   ├── encoders.json            # LabelEncoder mappings
@@ -40,20 +49,27 @@ github_upload/
 pip install -r requirements.txt
 ```
 
-### 2. Choose Your Pipeline
+### 2. Run the Complete Study
 
-#### 🏆 Winner: MAE (Deep Learning)
+#### 🚀 Main Execution (Recommended)
 ```bash
-cd src
-python mae_pipeline.py
+python main.py                    # Run complete imputation study
 ```
 
-#### 🔄 Alternative: Hybrid Methods
+#### 🔄 Individual Pipelines
 ```bash
 cd src
-python hybrid_pipeline.py        # Hybrid V1 (MAE inputs)
-python pure_classical_pipeline.py  # Pure Classical
-python classical_pipeline.py      # Classical baseline
+python hybrid_pipeline.py        # Hybrid methods with MAE features
+```
+
+#### 📊 View Results
+```bash
+# Check final results
+cat final_aggregated_comparison.csv
+
+# View visualizations
+open src/final_comparison_complete.png
+open data/data_correlation.png
 ```
 
 ### 3. View Results & Visualizations
@@ -63,9 +79,9 @@ python classical_pipeline.py      # Classical baseline
 - See `artifacts/results/final_comparison_rmse.png` for performance chart
 
 **Data Analysis Charts:**
-- `data/charts/data_correlation.png` - Feature correlations
-- `data/charts/data_missingness.png` - Missingness patterns  
-- `data/charts/data_target_dist.png` - Target distribution
+- `data/data_correlation.png` - Feature correlations
+- `data/data_missingness.png` - Missingness patterns  
+- `data/data_target_dist.png` - Target distribution
 
 **Model Performance Charts:**
 - `src/mae_residuals.png` - MAE residual analysis
@@ -179,7 +195,7 @@ Target: fbs (fasting blood sugar) - 9.8% missingness
 
 ## 📄 License
 
-This project is for research and educational purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🔍 Future Work
 
