@@ -12,6 +12,10 @@
 
 This study compares **Masked Autoencoder (MAE)** with **hybrid imputation methods** for missing medical data. We evaluate performance across multiple mask configurations and demonstrate that **simple deep learning architectures outperform complex hybrid approaches** for cardiovascular risk factor imputation.
 
+![RMSE Comparison](src/final_comparison_rmse.png)
+
+*Figure: RMSE performance comparison across different imputation methods*
+
 ## 📁 Project Structure
 
 ```
@@ -19,7 +23,6 @@ mae-hybrid-imputation-study/
 ├── README.md                    # This file
 ├── LICENSE                      # MIT License
 ├── requirements.txt             # Python dependencies
-├── imputation_research_plan.md  # Complete research plan
 ├── main.py                      # 🚀 Main execution script
 ├── final_aggregated_comparison.csv # 📊 Complete results summary
 ├── src/
