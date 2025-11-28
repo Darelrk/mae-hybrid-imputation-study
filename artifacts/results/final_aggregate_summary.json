@@ -1,0 +1,142 @@
+{
+  "comparison": [
+    {
+      "Category": "Deep Learning",
+      "Method": "MAE (Baseline)",
+      "RMSE": 1.0380245620884079,
+      "Best_RMSE": 0.9460591886460689
+    },
+    {
+      "Category": "Hybrid V1",
+      "Method": "Hybrid-KNN (V1)",
+      "RMSE": 1.1626122172974878,
+      "Best_RMSE": 1.1340050579838195
+    },
+    {
+      "Category": "Hybrid V1",
+      "Method": "Hybrid-KMeans (V1)",
+      "RMSE": 1.149170788379098,
+      "Best_RMSE": 1.1491707883790983
+    },
+    {
+      "Category": "Hybrid V1",
+      "Method": "Hybrid-MissForest (V1)",
+      "RMSE": 1.15884019460256,
+      "Best_RMSE": 1.1342778960120514
+    },
+    {
+      "Category": "Pure Classical",
+      "Method": "Pure-KNN (Pure)",
+      "RMSE": 1.1766944591926665,
+      "Best_RMSE": 1.1766944591926665
+    },
+    {
+      "Category": "Pure Classical",
+      "Method": "Pure-KMeans (Pure)",
+      "RMSE": 1.1472417883854524,
+      "Best_RMSE": 1.1472417883854527
+    },
+    {
+      "Category": "Pure Classical",
+      "Method": "Pure-MissForest (Pure)",
+      "RMSE": 1.1636412461240269,
+      "Best_RMSE": 1.1636412461240266
+    },
+    {
+      "Category": "Hybrid V2",
+      "Method": "Residual-KNN",
+      "RMSE": 1.1801550996954928,
+      "Best_RMSE": 1.1645821682144424
+    },
+    {
+      "Category": "Hybrid V2",
+      "Method": "Residual-RF",
+      "RMSE": 1.1466975168564857,
+      "Best_RMSE": 1.1239407346571504
+    },
+    {
+      "Category": "Hybrid V2",
+      "Method": "Fused-KMeans",
+      "RMSE": 1.149170788379098,
+      "Best_RMSE": 1.1491707883790983
+    }
+  ],
+  "details": {
+    "MAE": {
+      "total_runs": 45,
+      "processed_runs": 45,
+      "failed_runs": 0,
+      "best_rmse": 0.9460591886460689,
+      "mean_rmse": 1.0380245620884079,
+      "std_rmse": 0.040157264467502084,
+      "best_run": "fold_2_repeat_2_mask_0.2",
+      "runtime_total": 264.08375096321106,
+      "rmse_rate_0.2": 1.0355309685576595,
+      "rmse_rate_0.4": 1.0448128232633704,
+      "rmse_rate_0.6": 1.0337298944441935
+    },
+    "Hybrid V1": {
+      "total_runs": 45,
+      "processed": 45,
+      "methods": {
+        "Hybrid-KNN": {
+          "mean_rmse": 1.1626122172974878,
+          "std_rmse": 0.015508050213207517,
+          "best_rmse": 1.1340050579838195
+        },
+        "Hybrid-KMeans": {
+          "mean_rmse": 1.149170788379098,
+          "std_rmse": 2.2455366315174155e-16,
+          "best_rmse": 1.1491707883790983
+        },
+        "Hybrid-MissForest": {
+          "mean_rmse": 1.15884019460256,
+          "std_rmse": 0.00969184635866584,
+          "best_rmse": 1.1342778960120514
+        }
+      }
+    },
+    "Pure Classical": {
+      "total_runs": 45,
+      "processed": 45,
+      "methods": {
+        "Pure-KNN": {
+          "mean_rmse": 1.1766944591926665,
+          "std_rmse": 0.0,
+          "best_rmse": 1.1766944591926665
+        },
+        "Pure-KMeans": {
+          "mean_rmse": 1.1472417883854524,
+          "std_rmse": 2.2455366315174155e-16,
+          "best_rmse": 1.1472417883854527
+        },
+        "Pure-MissForest": {
+          "mean_rmse": 1.1636412461240269,
+          "std_rmse": 2.2455366315174155e-16,
+          "best_rmse": 1.1636412461240266
+        }
+      }
+    },
+    "Hybrid V2": {
+      "total_runs": 45,
+      "processed": 45,
+      "methods": {
+        "Residual-KNN": {
+          "mean_rmse": 1.1801550996954928,
+          "std_rmse": 0.006512479565579839,
+          "best_rmse": 1.1645821682144424
+        },
+        "Residual-RF": {
+          "mean_rmse": 1.1466975168564857,
+          "std_rmse": 0.010041216369297218,
+          "best_rmse": 1.1239407346571504
+        },
+        "Fused-KMeans": {
+          "mean_rmse": 1.149170788379098,
+          "std_rmse": 2.2455366315174155e-16,
+          "best_rmse": 1.1491707883790983
+        }
+      }
+    }
+  }
+}
