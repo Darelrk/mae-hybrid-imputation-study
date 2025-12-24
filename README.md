@@ -193,7 +193,7 @@ https://doi.org/10.24432/C52P4X.
 Heart Disease Imputation using Masked Autoencoder
 MAE Winner: RMSE 1.0380 ± 0.0402
 Dataset: UCI Heart Disease Repository
-Target: fbs (fasting blood sugar) - 9.8% missingness
+Target: fbs (fasting blood sugar)
 ```
 
 ## 📄 License
